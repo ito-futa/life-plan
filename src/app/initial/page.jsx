@@ -6,8 +6,16 @@ import { MdFamilyRestroom } from "react-icons/md";
 
 
 export default function Initial() {
+
+  // 現在の日付を取得
+  const now = new Date();
+  const CurrentYear = now.getFullYear();
+  const CurrentMonth = now.getMonth() + 1; // 月は0から始まるため、+1して調整
+  const CurrentDay = now.getDate();
+
   return (
     <>
+      <span>{CurrentYear}年{CurrentMonth}月{CurrentDay}日</span>現在のあなたの情報を入力してください。
       <div className={styles.initial}>
         <p>step1</p>
         <h2><FaUserCircle />あなたの情報</h2>
@@ -15,15 +23,15 @@ export default function Initial() {
         <div>
           <h3>生年月日</h3>
           {/* 年月日入力 */}
-          <input type="number" id="head-birth-year" min="0" maxLength="4" />年
-          <input type="number" id="head-birth-month" min="0" maxLength="2" />月
-          <input type="number" id="head-birth-day" min="0" maxLength="2" />日
+          <input type="number" id="birth-year" min="1900" max="2023" maxLength="4" placeholder="（例）1990" />年
+          <input type="number" id="birth-month" min="1" max="12" maxLength="2" placeholder="（例）12" />月
+          <input type="number" id="birth-day" min="1" max="31" maxLength="2" placeholder="（例）25" />日
         </div>
 
         <div>
           <h3>ご年齢</h3>
           <select name="your_age">
-            <option value="" selected></option>
+            <option value="" selected>選択してください</option>
             <option value="16">16歳</option>
             <option value="17">17歳</option>
             <option value="18">18歳</option>
@@ -89,23 +97,23 @@ export default function Initial() {
 
         <div>
           <h3>貯金・預金の額</h3>
-          <input type="number" id="savings-amount" name="savingsAmount" min="0" maxLength="10" />万円
+          <input type="number" id="savings-amount" name="savingsAmount" min="0" maxLength="10" placeholder="（例）500" />万円
         </div>
 
         <div>
           <h3>投資資金の合計額</h3>
-          <input type="number" id="investment-total" name="investmentTotal" min="0" maxLength="10" />万円
+          <input type="number" id="investment-total" name="investmentTotal" min="0" maxLength="10" placeholder="（例）100" />万円
         </div>
 
         <div>
           <h3>投資の想定年利</h3>
-          <input type="number" id="investment-annual-rate" name="investmentAnnualRate" maxLength="10" />%
+          <input type="number" id="investment-annual-rate" name="investmentAnnualRate" maxLength="10" placeholder="（例）4" />%
         </div>
 
         <div>
           <h3>ご職業</h3>
           <select name="occupation" id="occupation">
-            <option value="" selected></option>
+            <option value="" selected>選択してください</option>
             <option value="1">会社員</option>
             <option value="2">公務員</option>
             <option value="3">自営業</option>
@@ -115,7 +123,7 @@ export default function Initial() {
 
         <div>
           <h3>手取り年収</h3>
-          <input type="number" id="net-annual-income" name="netAnnualIncome" min="0" maxLength="6" />万円
+          <input type="number" id="net-annual-income" name="netAnnualIncome" min="0" maxLength="6" placeholder="（例）350" />万円
         </div>
 
         <div>
@@ -129,13 +137,13 @@ export default function Initial() {
 
         <div>
           <h3>想定される退職金の額</h3>
-          <input type="number" id="expected-retirement-bonus" name="expectedRetirementBonus" min="0" maxLength="10" />万円
+          <input type="number" id="expected-retirement-bonus" name="expectedRetirementBonus" min="0" maxLength="10" placeholder="（例）2000" />万円
         </div>
 
         <div>
           <h3>退職年齢</h3>
           <select name="retirement-age" id="retirementAge">
-            <option value="" selected></option>
+            <option value="" selected>選択してください</option>
             <option value="16">16</option>
             <option value="17">17</option>
             <option value="18">18</option>
@@ -209,11 +217,6 @@ export default function Initial() {
         </div>
 
         <div>
-          <h3>想定手取り年収</h3>
-          <input type="number" id="expected-net-annual-income" name="expectedNetAnnualIncome" min="0" maxLength="10" />万円
-        </div>
-
-        <div>
           <h3>性別</h3>
           <input type="radio" id="head-gender-female" name="head-gender" value="0" />
           <label for="head-gender-female">男性</label>
@@ -229,7 +232,7 @@ export default function Initial() {
         <p>
           <select name="ListPref" id="ListPref">
             {/* 都道府県選択 */}
-            <option value="" selected></option>
+            <option value="" selected>選択してください</option>
             <option value="1">北海道</option>
             <option value="2">青森県</option>
             <option value="3">岩手県</option>
@@ -315,7 +318,7 @@ export default function Initial() {
         <div>
           <h3>結婚の想定時期</h3>
           <select name="expected-marriage-time" id="expectedMarriageTime">
-            <option value="" selected></option>
+            <option value="" selected>選択してください</option>
             <option value="1">1年後</option>
             <option value="2">2年後</option>
             <option value="3">3年後</option>
@@ -356,7 +359,7 @@ export default function Initial() {
         <div>
           <h3>ご年齢</h3>
           <select name="partner_age">
-            <option value="" selected></option>
+            <option value="" selected>選択してください</option>
             <option value="16">16歳</option>
             <option value="17">17歳</option>
             <option value="18">18歳</option>
