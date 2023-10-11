@@ -1,11 +1,12 @@
 import React from 'react'
-import styles from "./initial.module.css"
+import styles from "./base.module.css"
+import Image from 'next/image';
 // react-iconsの読み込み
 import { FaUserCircle } from "react-icons/fa";
 import { MdFamilyRestroom } from "react-icons/md";
 
 
-export default function Initial() {
+export default function Base() {
 
   // 現在の日付を取得
   const now = new Date();
@@ -15,6 +16,13 @@ export default function Initial() {
 
   return (
     <>
+      <Image
+        src="/image/baseVisual.png" // 画像のパス
+        alt="タブレットに自分の状況を入力する女性のイラスト" // altテキスト
+        width={512} // 画像の幅
+        height={512} // 画像の高さ
+      // layout="responsive" // レスポンシブ対応
+      />
       <span>{CurrentYear}年{CurrentMonth}月{CurrentDay}日</span>現在のあなたの情報を入力してください。
       <div className={styles.initial}>
         <p>step1</p>
