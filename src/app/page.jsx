@@ -22,6 +22,7 @@ export default function Home() {
       />
       <PositiveButton
         label="無料で使ってみる" // ラベルを指定
+        href="./base"
       />
       <p>{metadata.title}のポイント</p>
       <ol>

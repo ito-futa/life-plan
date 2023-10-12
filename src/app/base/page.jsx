@@ -29,7 +29,7 @@ export default function Base() {
         <h2><FaUserCircle />あなたの情報</h2>
 
         <div>
-          <h3>生年月日</h3>
+          <h3 className={styles.required}>生年月日</h3>
           {/* 年月日入力 */}
           <input type="number" id="birth-year" min="1900" max="2023" maxLength="4" placeholder="（例）1990" />年
           <input type="number" id="birth-month" min="1" max="12" maxLength="2" placeholder="（例）12" />月
@@ -37,7 +37,7 @@ export default function Base() {
         </div>
 
         <div>
-          <h3>ご年齢</h3>
+          <h3 className={styles.required}>ご年齢</h3>
           <select name="your_age">
             <option value="" selected>選択してください</option>
             <option value="16">16歳</option>
@@ -104,22 +104,22 @@ export default function Base() {
         </div>
 
         <div>
-          <h3>貯金・預金の額</h3>
+          <h3 className={styles.required}>貯金・預金の額</h3>
           <input type="number" id="savings-amount" name="savingsAmount" min="0" maxLength="10" placeholder="（例）500" />万円
         </div>
 
         <div>
-          <h3>投資資金の合計額</h3>
+          <h3 className={styles.required}>投資資金の合計額</h3>
           <input type="number" id="investment-total" name="investmentTotal" min="0" maxLength="10" placeholder="（例）100" />万円
         </div>
 
         <div>
-          <h3>投資の想定年利</h3>
+          <h3 className={styles.required}>投資の想定年利</h3>
           <input type="number" id="investment-annual-rate" name="investmentAnnualRate" maxLength="10" placeholder="（例）4" />%
         </div>
 
         <div>
-          <h3>ご職業</h3>
+          <h3 className={styles.required}>ご職業</h3>
           <select name="occupation" id="occupation">
             <option value="" selected>選択してください</option>
             <option value="1">会社員</option>
@@ -130,12 +130,12 @@ export default function Base() {
         </div>
 
         <div>
-          <h3>手取り年収</h3>
+          <h3 className={styles.required}>手取り年収</h3>
           <input type="number" id="net-annual-income" name="netAnnualIncome" min="0" maxLength="6" placeholder="（例）350" />万円
         </div>
 
         <div>
-          <h3>退職金の有無</h3>
+          <h3 className={styles.required}>退職金の有無</h3>
           <input type="radio" id="retirement-bonus-none" name="retirementBonus" value="0" />
           <label for="retirement-bonus-none">ない</label>
 
@@ -144,12 +144,12 @@ export default function Base() {
         </div>
 
         <div>
-          <h3>想定される退職金の額</h3>
+          <h3 className={styles.required}>想定される退職金の額</h3>
           <input type="number" id="expected-retirement-bonus" name="expectedRetirementBonus" min="0" maxLength="10" placeholder="（例）2000" />万円
         </div>
 
         <div>
-          <h3>退職年齢</h3>
+          <h3 className={styles.required}>退職年齢</h3>
           <select name="retirement-age" id="retirementAge">
             <option value="" selected>選択してください</option>
             <option value="16">16</option>
@@ -216,7 +216,7 @@ export default function Base() {
         </div>
 
         <div>
-          <h3>退職後の労働予定</h3>
+          <h3 className={styles.required}>退職後の労働予定</h3>
           <input type="radio" id="post-retirement-work-none" name="postRetirementWork" value="0" />
           <label for="post-retirement-work-none">ない</label>
 
@@ -225,7 +225,7 @@ export default function Base() {
         </div>
 
         <div>
-          <h3>性別</h3>
+          <h3 className={styles.required}>性別</h3>
           <input type="radio" id="head-gender-female" name="head-gender" value="0" />
           <label for="head-gender-female">男性</label>
 
@@ -236,7 +236,7 @@ export default function Base() {
           <label for="head-gender-other">その他</label>
         </div>
 
-        <h3>お住まいの都道府県</h3>
+        <h3 className={styles.required}>お住まいの都道府県</h3>
         <p>
           <select name="ListPref" id="ListPref">
             {/* 都道府県選択 */}
@@ -298,9 +298,15 @@ export default function Base() {
 
         <p>step2</p>
         <h2><MdFamilyRestroom />家族の情報</h2>
-
+        <Image
+          src="/image/iconFamily.png" // 画像のパス
+          alt="タブレットに自分の状況を入力する女性のイラスト" // altテキスト
+          width={512} // 画像の幅
+          height={512} // 画像の高さ
+        // layout="responsive" // レスポンシブ対応
+        />
         <div>
-          <h3>配偶者の有無</h3>
+          <h3 className={styles.required}>配偶者の有無</h3>
           <input type="radio" id="spouse-exist" name="spouseExistence" value="1" />
           <label for="spouse-exist">いる</label>
 
@@ -312,7 +318,7 @@ export default function Base() {
         <h3>▼いらっしゃらない場合</h3>
 
         <div>
-          <h3>今後の結婚予定</h3>
+          <h3 className={styles.required}>今後の結婚予定</h3>
           <input type="radio" id="marriage-plan-none" name="marriagePlan" value="0" />
           <label for="marriage-plan-none">ない</label>
 
@@ -324,7 +330,7 @@ export default function Base() {
         </div>
 
         <div>
-          <h3>結婚の想定時期</h3>
+          <h3 className={styles.required}>結婚の想定時期</h3>
           <select name="expected-marriage-time" id="expectedMarriageTime">
             <option value="" selected>選択してください</option>
             <option value="1">1年後</option>
@@ -351,7 +357,7 @@ export default function Base() {
         </div>
 
         <div>
-          <h3>今後式の有無</h3>
+          <h3 className={styles.required}>今後式の有無</h3>
           <input type="radio" id="ceremony-none" name="ceremonyExistence" value="0" />
           <label for="ceremony-none">しない</label>
 
@@ -362,10 +368,10 @@ export default function Base() {
           <label for="ceremony-unknown">わからない</label>
         </div>
 
-        <h3>▼いらっしゃる場合 もしくは、結婚予定の場合、お相手のご情報を入力してください</h3>
+        <h3 className>▼いらっしゃる場合 もしくは、結婚予定の場合、お相手のご情報を入力してください</h3>
 
         <div>
-          <h3>ご年齢</h3>
+          <h3 className={styles.required}>ご年齢</h3>
           <select name="partner_age">
             <option value="" selected>選択してください</option>
             <option value="16">16歳</option>

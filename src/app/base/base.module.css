@@ -1,3 +1,15 @@
 .initial {
     padding: 12px;
 }
+
+.required::after {
+  content: "必須";  /* 追加するテキスト */
+  color: #fff;      /* テキストの色 */
+  margin-left: 8px; /* 左マージン */
+  padding: 4px 8px 4px;
+  background: #ec5655;
+  border-radius: 12px;
+  font-size: 60%;
+  letter-spacing: 0.05em;
+}
+
