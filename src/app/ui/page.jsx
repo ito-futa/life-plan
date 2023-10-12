@@ -4,8 +4,10 @@ import Link from 'next/link'
 
 export default function PositiveButton({ label, href }) {
   return (
-    <Link className={styles.button} href={href}>
-      <span>{label}</span>
-    </Link>
+    <>
+      <Link className={styles.button} href={href}>
+        <span>{label}</span>
+      </Link>
+    </>
   )
 }
