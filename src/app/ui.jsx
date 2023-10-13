@@ -6,7 +6,9 @@ export default function PositiveButton({ label, href }) {
   return (
     <>
       <Link className={styles.button} href={href}>
-        <span>{label}</span>
+        <button>
+          {label}
+        </button>
       </Link>
     </>
   )

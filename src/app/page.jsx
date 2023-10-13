@@ -4,7 +4,7 @@ import Header from './header/page'
 import Footer from './footer/page'
 import Head from 'next/head'
 import Link from 'next/link'
-import PositiveButton from './ui/page'
+import PositiveButton from './ui.jsx'
 import { metadata } from './layout'
 
 export default function Home() {
