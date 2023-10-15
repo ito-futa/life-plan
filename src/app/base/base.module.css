@@ -2,14 +2,35 @@
     padding: 12px;
 }
 
+.required {
+  position: relative;
+}
+
+.unit {
+  margin: 0 8px;
+}
+
 .required::after {
+  position: absolute;
   content: "必須";  /* 追加するテキスト */
   color: #fff;      /* テキストの色 */
   margin-left: 8px; /* 左マージン */
   padding: 4px 8px 4px;
-  background: #ec5655;
+  background: #DD6973;
   border-radius: 12px;
   font-size: 60%;
   letter-spacing: 0.05em;
 }
 
+/* styles.module.css */
+.checked::after  {
+  position: absolute;
+  content: "✓";  /* 追加するテキスト */
+  color: #fff;      /* テキストの色 */
+  margin-left: 8px; /* 左マージン */
+  padding: 4px 8px 4px;
+  background: #55ec71;
+  border-radius: 12px;
+  font-size: 60%;
+  letter-spacing: 0.05em;
+}

@@ -1,18 +1,14 @@
 .button {
     display: inline-block;
+    text-decoration: none;
     align-items: center;
-    margin: 0 auto;
     padding: 1em 2em;
     border: none;
     border-radius: 4px;
-    background-color: #2589d0;
-    text-decoration: none;
-}
-
-.button span {
+    background-color: #DD6973;
     color: #fff;
 }
 
 .button:hover {
-    background-color: #1579c0;
+    background-color: #ff7b86;
 }

@@ -1,6 +1,9 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react';
 import styles from "./base.module.css"
 import Image from 'next/image';
+// UIコンポーネントをすべて呼び出し
+import * as UI from '/components/elements/ui.jsx';
 // react-iconsの読み込み
 import { FaUserCircle } from "react-icons/fa";
 import { MdFamilyRestroom } from "react-icons/md";
@@ -13,6 +16,13 @@ export default function Base() {
   const CurrentYear = now.getFullYear();
   const CurrentMonth = now.getMonth() + 1; // 月は0から始まるため、+1して調整
   const CurrentDay = now.getDate();
+
+  // バリデートの途中
+  // const [isChecked, setIsChecked] = useState(false);
+
+  // const handleChange = () => {
+  //   setIsChecked(!isChecked);
+  // };
 
   return (
     <>
@@ -31,9 +41,9 @@ export default function Base() {
         <div>
           <h3 className={styles.required}>生年月日</h3>
           {/* 年月日入力 */}
-          <input type="number" id="birth-year" min="1900" max="2023" maxLength="4" placeholder="（例）1990" />年
-          <input type="number" id="birth-month" min="1" max="12" maxLength="2" placeholder="（例）12" />月
-          <input type="number" id="birth-day" min="1" max="31" maxLength="2" placeholder="（例）25" />日
+          <input type="number" id="birth-year" min="1900" max="2023" maxLength="4" placeholder="（例）1990" /><span className={styles.unit}>年</span>
+          <input type="number" id="birth-month" min="1" max="12" maxLength="2" placeholder="（例）12" /><span className={styles.unit}>月</span>
+          <input type="number" id="birth-day" min="1" max="31" maxLength="2" placeholder="（例）25" /><span className={styles.unit}>日</span>
         </div>
 
         <div>
@@ -105,17 +115,17 @@ export default function Base() {
 
         <div>
           <h3 className={styles.required}>貯金・預金の額</h3>
-          <input type="number" id="savings-amount" name="savingsAmount" min="0" maxLength="10" placeholder="（例）500" />万円
+          <input type="number" id="savings-amount" name="savingsAmount" min="0" maxLength="10" placeholder="（例）500" /><span className={styles.unit}>万円</span>
         </div>
 
         <div>
           <h3 className={styles.required}>投資資金の合計額</h3>
-          <input type="number" id="investment-total" name="investmentTotal" min="0" maxLength="10" placeholder="（例）100" />万円
+          <input type="number" id="investment-total" name="investmentTotal" min="0" maxLength="10" placeholder="（例）100" /><span className={styles.unit}>万円</span>
         </div>
 
         <div>
           <h3 className={styles.required}>投資の想定年利</h3>
-          <input type="number" id="investment-annual-rate" name="investmentAnnualRate" maxLength="10" placeholder="（例）4" />%
+          <input type="number" id="investment-annual-rate" name="investmentAnnualRate" maxLength="10" placeholder="（例）4" /><span className={styles.unit}>%</span>
         </div>
 
         <div>
@@ -131,7 +141,7 @@ export default function Base() {
 
         <div>
           <h3 className={styles.required}>手取り年収</h3>
-          <input type="number" id="net-annual-income" name="netAnnualIncome" min="0" maxLength="6" placeholder="（例）350" />万円
+          <input type="number" id="net-annual-income" name="netAnnualIncome" min="0" maxLength="6" placeholder="（例）350" /><span className={styles.unit}>万円</span>
         </div>
 
         <div>
@@ -145,7 +155,7 @@ export default function Base() {
 
         <div>
           <h3 className={styles.required}>想定される退職金の額</h3>
-          <input type="number" id="expected-retirement-bonus" name="expectedRetirementBonus" min="0" maxLength="10" placeholder="（例）2000" />万円
+          <input type="number" id="expected-retirement-bonus" name="expectedRetirementBonus" min="0" maxLength="10" placeholder="（例）2000" /><span className={styles.unit}>万円</span>
         </div>
 
         <div>
@@ -357,7 +367,7 @@ export default function Base() {
         </div>
 
         <div>
-          <h3 className={styles.required}>今後式の有無</h3>
+          <h3 className={styles.required}>結婚式の有無</h3>
           <input type="radio" id="ceremony-none" name="ceremonyExistence" value="0" />
           <label for="ceremony-none">しない</label>
 
@@ -437,8 +447,10 @@ export default function Base() {
           </select>
         </div>
 
-
-
+        <UI.PositiveButton
+          label="結果を確認する" // ラベルを指定
+          href="./"
+        />
 
       </div>
     </>
