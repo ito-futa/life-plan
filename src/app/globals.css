@@ -58,8 +58,8 @@ label {
 
 /* ラベルが関連づけられたラジオボタンが選択されたときのスタイル */
 input[type="radio"]:checked + label {
-  background-color: #ff8c00;
-  border: 2px solid #ff8c00;
+  background-color: #67999B;
+  border: 2px solid #67999B;
   color: #fff;
   border: none;
 }
