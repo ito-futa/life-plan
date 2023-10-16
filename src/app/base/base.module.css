@@ -1,3 +1,45 @@
+.main {
+  margin: 40px;
+  display: grid;
+  justify-content: center;
+  background-color: #fff;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+/* 親要素を中央寄せにする */
+.circleMask {
+  text-align: center;
+  margin: 16px 0;
+}
+
+/* 画像をマスクする */
+.maskedImage {
+  object-fit: cover; /* アスペクト比を維持しながらフィルする */
+  overflow: hidden; /* はみ出た部分を隠す */
+  border-radius: 50%; /* 円形にする */
+  border: 2px solid #eee;;
+}
+
+.subheading h2 {
+  margin: 4px;
+}
+
+.subheading p {
+  display: inline-block;
+  margin: 0;
+  padding: 4px 8px;
+  background-color: #67999B;
+  border-radius: 32px;
+  color: #fff;
+}
+
+.subheading svg {
+  font-size: 18px;
+  margin-right: 8px;
+}
+
 .initial {
     padding: 12px;
 }

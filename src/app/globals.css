@@ -33,6 +33,10 @@ body {
   font-weight: 500;
 }
 
+.center {
+  text-align: center;
+}
+
 
   /* フォームの仮CSS */
 input[number],select {
