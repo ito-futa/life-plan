@@ -1,3 +1,48 @@
+.mainVisual {
+  background-color: #eee;
+  margin-bottom: 16px;
+
+  /* PCとタブレットのスタイル */
+  @media (min-width: 768px) {
+    padding: 16px;
+    display: grid;
+    grid-template-areas: "left right";
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.mainVisualMessage {
+  place-self: center;
+  /* スマホのスタイル */
+  @media (max-width: 767px) {
+  }
+
+  /* PCとタブレットのスタイル */
+  @media (min-width: 768px) {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    height: auto;
+    letter-spacing: 0.15em;
+    grid-area: left;
+  }
+}
+
+.mainVisualImage {
+  /* スマホのスタイル */
+  @media (max-width: 767px) {
+    /* スマホ用のスタイルを記述 */
+  }
+
+  /* PCとタブレットのスタイル */
+  @media (min-width: 768px) {
+    grid-area: right;
+  }
+}
+
+
+
+
 .main {
   display: flex;
   flex-direction: column;

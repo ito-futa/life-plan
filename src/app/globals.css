@@ -20,6 +20,12 @@
   --font-com: "Noto Sans JP", sans-serif;
 }
 
+/* Imageで指定したサイズが横幅を超えないように制御 */
+img {
+  max-width: 100%; /* 親要素の100%を超えないように */
+  height: auto;   /* 高さは自動 */
+}
+
 body {
   background: var(--background-primary);
   color: var(--text-primary);
