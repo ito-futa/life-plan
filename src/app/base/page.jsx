@@ -314,13 +314,7 @@ export default function Base() {
             <p>step2</p>
             <h2 ><MdFamilyRestroom /><span>家族の情報</span></h2>
           </div>
-          <Image
-            src="/image/iconFamily.png" // 画像のパス
-            alt="タブレットに自分の状況を入力する女性のイラスト" // altテキスト
-            width={512} // 画像の幅
-            height={512} // 画像の高さ
-          // layout="responsive" // レスポンシブ対応
-          />
+
           <div>
             <h3 className={styles.required}>配偶者の有無</h3>
             <input type="radio" id="spouse-exist" name="spouseExistence" value="1" />
