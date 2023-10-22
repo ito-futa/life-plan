@@ -35,11 +35,13 @@ export default function Base() {
         // layout="responsive" // レスポンシブ対応
         />
       </div>
-      <main className={styles.main}>
-        <span>{CurrentYear}年{CurrentMonth}月{CurrentDay}日</span>現在のあなたの情報を入力してください。
-        <div className={styles.initial}>
+      <main className={styles.formSection}>
+        <div className={styles.formDescription}>
+          <p>{CurrentYear}年{CurrentMonth}月{CurrentDay}日</p>
+          <p>現在のあなたの情報を入力してください。</p>
+        </div>
+        <div>
           <div className={styles.subheading}>
-            <p>step1</p>
             <h2><FaUserCircle /><span>あなたの情報</span></h2>
           </div>
           <div>
@@ -251,7 +253,7 @@ export default function Base() {
           </div>
 
           <h3 className={styles.required}>お住まいの都道府県</h3>
-          <p>
+          <div>
             <select name="ListPref" id="ListPref">
               {/* 都道府県選択 */}
               <option value="" selected>選択してください</option>
@@ -303,15 +305,14 @@ export default function Base() {
               <option value="46">鹿児島県</option>
               <option value="47">沖縄県</option>
               <option value="99">海外・その他</option>
-            </select><br />
-            ※収入や支出に関して、都道府県ごとの平均値・金額を自動反映してシミュレーションできるようになります。
-          </p>
+            </select>
+            <p className={styles.formSupplement}>※収入や支出に関して、都道府県ごとの平均値・金額を自動反映してシミュレーションできるようになります。</p>
+          </div>
 
 
 
 
           <div className={styles.subheading}>
-            <p>step2</p>
             <h2 ><MdFamilyRestroom /><span>家族の情報</span></h2>
           </div>
 
@@ -447,7 +448,7 @@ export default function Base() {
             </select>
           </div>
 
-          <div className="center">
+          <div className="center margin24px">
             <UI.PositiveButton
               label="結果を確認する" // ラベルを指定
               href="./"

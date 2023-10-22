@@ -27,7 +27,7 @@ export default function Home() {
 
       <main className={styles.main}>
 
-        <p>＼あなたの人生、シミュレートしてみませんか？／</p>
+        <p className={styles.buttonAppeal}>＼あなたの人生、シミュレートしてみませんか？／</p>
         <UI.PositiveButton
           label="無料で使ってみる" // ラベルを指定
           href="./base"

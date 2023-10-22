@@ -1,17 +1,26 @@
-.main {
-  margin: 40px;
+.formSection {
+  /* スマホのスタイル */
+  @media (max-width: 767px) {
+    margin: 16px;
+    padding: 16px;
+  }
+
+  /* PCとタブレットのスタイル */
+  @media (min-width: 768px) {
+    margin: 40px 16%;
+    padding: 32px;
+  }
+
   display: grid;
   justify-content: center;
-  background-color: #fff;
+  background-color: var(--background-secondary);
   border: 2px solid #eee;
   border-radius: 8px;
-  padding: 16px;
 }
 
 /* 親要素を中央寄せにする */
 .circleMask {
   text-align: center;
-  margin: 16px 0;
 }
 
 /* 画像をマスクする */
@@ -20,28 +29,26 @@
   overflow: hidden; /* はみ出た部分を隠す */
   border-radius: 50%; /* 円形にする */
   border: 2px solid #eee;;
+  margin-top: 24px;
+}
+
+.formDescription {
+  text-align: center;
 }
 
 .subheading h2 {
   margin: 4px;
-}
-
-.subheading p {
+  color: #666;
+  background-color: var(--background-primary);
+  padding: 4px 16px;
   display: inline-block;
-  margin: 0;
-  padding: 4px 8px;
-  background-color: #67999B;
-  border-radius: 32px;
-  color: #fff;
+  border-radius: 4px;
+  font-weight: normal;
 }
 
 .subheading svg {
   font-size: 18px;
   margin-right: 8px;
-}
-
-.initial {
-    padding: 12px;
 }
 
 .required {
@@ -64,15 +71,6 @@
   letter-spacing: 0.05em;
 }
 
-/* styles.module.css */
-.checked::after  {
-  position: absolute;
-  content: "✓";  /* 追加するテキスト */
-  color: #fff;      /* テキストの色 */
-  margin-left: 8px; /* 左マージン */
-  padding: 4px 8px 4px;
-  background: #55ec71;
-  border-radius: 12px;
-  font-size: 60%;
-  letter-spacing: 0.05em;
+.formSupplement {
+  font-size: small;
 }

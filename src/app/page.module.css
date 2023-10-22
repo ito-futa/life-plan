@@ -1,5 +1,5 @@
 .mainVisual {
-  background-color: #eee;
+  background-color: var(--background-primary);
   margin-bottom: 16px;
 
   /* PCとタブレットのスタイル */
@@ -34,7 +34,7 @@
 .mainVisualImage {
   &.mainVisualImage img {
   border-radius: 8px;
-}
+  }
 
   /* スマホのスタイル */
   @media (max-width: 767px) {
@@ -49,6 +49,7 @@
 
 .main {
   text-align: center;
+  background-color: var(--background-secondary);
 }
 
 .description {
@@ -77,6 +78,12 @@
   border: 1px solid rgba(var(--callout-border-rgb), 0.3);
   border-radius: var(--border-radius);
 }
+
+.buttonAppeal {
+  margin-bottom: 0;
+  padding-top: 24px;
+}
+
 
 .code {
   font-weight: 700;

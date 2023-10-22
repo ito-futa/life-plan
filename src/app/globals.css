@@ -12,9 +12,9 @@
   /* テキストと背景 */
   --text-primary: #333; /* 主要テキスト色 */
   --text-secondary: #fff; /* 補助テキスト色 */
-  --background-primary: #fff; /* 主要背景色 */
+  --background-primary: #eee; /* 主要背景色 */
   --background-primary-dark: #333; /* 主要背景色 */
-  --background-secondary: #fff2e8; /* 補助背景色 */
+  --background-secondary: #fff; /* 補助背景色 */
 
   /* フォント */
   --font-com: "Noto Sans JP", sans-serif;
@@ -37,6 +37,9 @@ body {
   text-align: center;
 }
 
+.margin24px {
+  margin: 24px;
+}
 
   /* フォームの仮CSS */
 input[number],select {
