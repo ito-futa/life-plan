@@ -25,27 +25,28 @@ export default function Home() {
         </div>
       </div>
 
-      <main className={styles.main}>
+      <div className={styles.main}>
 
         <p className={styles.buttonAppeal}>＼あなたの人生、シミュレートしてみませんか？／</p>
         <UI.PositiveButton
           label="無料で使ってみる" // ラベルを指定
           href="./base"
         />
+        <div className={styles.serviceDescriptionSection}>
+          <p>今の生活やお金の流れから、これからの人生でどれくらい貯められるか、必要かを見てみましょう。</p>
+          <p>{metadata.title}は未来の夢や計画をもっと素敵にするためのヒントをお伝えします。</p>
+          <span>FP資格保有者が監修</span>
 
-        <p>今の生活やお金の流れから、これからの人生でどれくらい貯められるか、必要かを見てみましょう。</p>
-        <p>{metadata.title}は未来の夢や計画をもっと素敵にするためのヒントをお伝えします。</p>
-        <span>FP資格保有者が監修</span>
-
-        <p>{metadata.title}について</p>
-        <ol>
-          <li>商品の押し売りはしません</li>
-          <li>無料でシミュレーションできます</li>
-          <li>結果を見比べることができる</li>
-        </ol>
-        <p>{metadata.title}ができること</p>
-        <p>{metadata.title}の使い方</p>
-      </main>
+          <p>{metadata.title}について</p>
+          <ol>
+            <li>商品の押し売りはしません</li>
+            <li>無料でシミュレーションできます</li>
+            <li>結果を見比べることができる</li>
+          </ol>
+          <p>{metadata.title}ができること</p>
+          <p>{metadata.title}の使い方</p>
+        </div>
+      </div>
     </>
   )
 }

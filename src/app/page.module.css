@@ -80,11 +80,20 @@
 }
 
 .buttonAppeal {
-  margin-bottom: 0;
+  margin-bottom: 8px;
   padding-top: 24px;
 }
 
+.serviceDescriptionSection {
+  align-content: center;
+  align-items: center;
+  background-color: var(--background-primary);
+  border-radius: 32px;
+  margin: 32px;
+  padding: 32px;
+}
 
+/* ? */
 .code {
   font-weight: 700;
   font-family: var(--font-mono);
