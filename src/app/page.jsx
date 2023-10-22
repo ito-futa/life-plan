@@ -17,7 +17,7 @@ export default function Home() {
         </div>
         <div className={styles.mainVisualImage}>
           <Image
-            src="/image/mainVisual.png" // 画像のパス
+            src="/image/mainVisual.jpeg" // 画像のパス
             alt="家族で家計について話す二人の男女のイラスト" // altテキスト
             width={512} // 画像の幅
             height={512} // 画像の高さ
@@ -37,7 +37,7 @@ export default function Home() {
         <p>{metadata.title}は未来の夢や計画をもっと素敵にするためのヒントをお伝えします。</p>
         <span>FP資格保有者が監修</span>
 
-        <p>{metadata.title}のポイント</p>
+        <p>{metadata.title}について</p>
         <ol>
           <li>商品の押し売りはしません</li>
           <li>無料でシミュレーションできます</li>

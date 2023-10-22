@@ -32,6 +32,10 @@
 }
 
 .mainVisualImage {
+  &.mainVisualImage img {
+  border-radius: 8px;
+}
+
   /* スマホのスタイル */
   @media (max-width: 767px) {
     /* スマホ用のスタイルを記述 */
