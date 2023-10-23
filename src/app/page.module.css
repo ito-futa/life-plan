@@ -50,6 +50,7 @@
 .main {
   text-align: center;
   background-color: var(--background-secondary);
+  padding-bottom: 32px;
 }
 
 .description {
@@ -89,7 +90,7 @@
   align-items: center;
   background-color: var(--background-primary);
   border-radius: 32px;
-  margin: 32px;
+  margin: 32px 32px 0 32px;
   padding: 32px;
 }
 
