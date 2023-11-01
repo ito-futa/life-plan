@@ -8,7 +8,6 @@ import * as UI from '/components/elements/ui.jsx';
 import { FaUserCircle } from "react-icons/fa";
 import { MdFamilyRestroom } from "react-icons/md";
 
-
 export default function Base() {
 
   // 現在の日付を取得
